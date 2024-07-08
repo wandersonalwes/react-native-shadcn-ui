@@ -6,10 +6,11 @@ import { cn } from '../lib/utils'
 const buttonVariants = cva('flex flex-row items-center justify-center rounded-md', {
   variants: {
     variant: {
-      default: 'bg-slate-900 active:bg-slate-700',
-      secondary: 'bg-white border border-slate-200 active:bg-slate-100',
-      destructive: 'bg-red-500 active:bg-red-600',
-      ghost: 'bg-transparent active:bg-slate-100',
+      default: 'bg-slate-900 hover:bg-slate-700 active:bg-slate-700',
+      secondary:
+        'bg-white border border-slate-200 hover:bg-slate-100 active:bg-slate-100',
+      destructive: 'bg-red-500 hover:bg-red-600 active:bg-red-600',
+      ghost: 'bg-transparent hover:bg-slate-100 active:bg-slate-100',
       link: 'bg-transparent',
     },
     size: {

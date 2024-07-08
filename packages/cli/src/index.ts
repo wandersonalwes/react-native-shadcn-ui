@@ -1,14 +1,14 @@
 import yargs from 'yargs'
 import { hideBin } from 'yargs/helpers'
 
+import { initCommand } from './commands/init'
+
 yargs(hideBin(process.argv))
   .command(
     'init',
     'Configure the project for use with React Native Shadcn/UI',
     () => {},
-    (argv) => {
-      console.info(argv)
-    }
+    initCommand
   )
   .command(
     'add',

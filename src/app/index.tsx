@@ -1,6 +1,7 @@
 import { Text, View } from 'react-native'
 
 import { Button } from '../components/button'
+import { Avatar, AvatarFallback, AvatarImage } from '../components/avatar'
 
 export default function Index() {
   return (
@@ -16,6 +17,11 @@ export default function Index() {
         <Button label="lg" size="lg" />
         <Button label="sm" size="sm" />
       </View>
+
+      <Avatar>
+        <AvatarImage source={{ uri: 'https://github.com/wandersonalwes.png' }} />
+        <AvatarFallback>Wanderson Alves</AvatarFallback>
+      </Avatar>
     </View>
   )
 }

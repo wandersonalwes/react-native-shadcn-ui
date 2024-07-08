@@ -2,6 +2,7 @@ import yargs from 'yargs'
 import { hideBin } from 'yargs/helpers'
 
 import { initCommand } from './commands/init'
+import { addCommand } from './commands/add'
 
 yargs(hideBin(process.argv))
   .command(
@@ -14,21 +15,13 @@ yargs(hideBin(process.argv))
     'add',
     'Add a new component to the project',
     (yargs) => {
-      yargs
-        .option('name', {
-          type: 'string',
-          description: 'The name of the component',
-          demandOption: true,
-        })
-        .option('path', {
-          type: 'string',
-          description: 'The path to the component',
-          demandOption: true,
-        })
+      yargs.option('name', {
+        type: 'string',
+        description: 'The name of the component',
+        demandOption: true,
+      })
     },
-    (argv) => {
-      console.info(argv)
-    }
+    addCommand
   )
   .demandCommand(1)
   .parse()
